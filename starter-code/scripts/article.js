@@ -2,9 +2,12 @@
 
 var articles = [];
 
+var test = new Article(rawData[0]);
+
 function Article (rawDataObj) {
   // TODO: Use the JS object passed in to complete this constructor function:
   // Save ALL the properties of `rawDataObj` into `this`
+  // Completed - took around 30 minutes to accomplish - needs testing
   this.title = rawDataObj.title;
   this.category = rawDataObj.category;
   this.author = rawDataObj.author;
@@ -19,7 +22,7 @@ Article.prototype.toHtml = function() {
   However, in our modules.css stylesheet, we gave all elements
   with a class of template a display of none. Let's make
   sure we're not accidentally hiding our cloned article! */
-
+  $newArticle.removeClass('template');
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.data('category', this.category);
 
