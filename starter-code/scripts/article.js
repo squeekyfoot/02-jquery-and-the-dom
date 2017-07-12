@@ -34,6 +34,8 @@ Article.prototype.toHtml = function() {
     4. article body, and
     5. publication date. */
 
+  // Finished - we set aside 30 minutes to do this but we couldn't figure out the correct target to complete the html function - it was finished overnight
+
   $newArticle.find('header > h1').text(this.title);
   $newArticle.find('.byline a').text(this.author).attr('href', this.authorUrl);
   $newArticle.find('.byline').prepend('<p>' + this.body + '</p>');
